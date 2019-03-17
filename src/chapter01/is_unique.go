@@ -1,18 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 	"strings"
 )
 
 // 1.1
-func main() {
-	fmt.Println(isUnique("abcde"))
-	fmt.Println(isUnique("aaa"))
-	fmt.Println(isUnique("abca"))
-}
-
 func isUnique(str string) bool {
 	chars := strings.Split(str, "")
 	sort.Strings(chars)

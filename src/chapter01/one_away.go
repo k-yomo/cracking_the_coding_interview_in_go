@@ -1,20 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
 // 1.5
-func main() {
-	fmt.Println("Expected: true, Result: ", isOneAway("abcd", "acd"))
-	fmt.Println("Expected: true, Result: ",isOneAway("abcd", "abcdi"))
-	fmt.Println("Expected: true, Result: ",isOneAway("abcd", "abed"))
-	fmt.Println("Expected: false, Result: ",isOneAway("abcd", "abef"))
-	fmt.Println("Expected: false, Result: ",isOneAway("abcd", "abcdef"))
-	fmt.Println("Expected: false, Result: ",isOneAway("abcd", "ac"))
-}
-
 func isOneAway(str1 string, str2 string) bool {
 	chars1, chars2 := strings.Split(str1, ""), strings.Split(str2, "")
 	if len(chars1) == len(chars2) {

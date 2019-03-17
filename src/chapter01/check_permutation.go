@@ -1,19 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 	"strings"
 )
 
 // 1.2
-func main() {
-	fmt.Println(checkPermutation("abc", "cba"))
-	fmt.Println(checkPermutation("abca", "cba"))
-	fmt.Println(checkPermutation("abcb", "cba"))
-}
-
-func checkPermutation( str1 string, str2 string) bool {
+func checkPermutation(str1 string, str2 string) bool {
 	if len(str1) != len(str2) {
 		return false
 	}

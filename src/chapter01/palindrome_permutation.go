@@ -1,16 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
 // 1.4
-func main() {
-	fmt.Println(checkPalindromePermutation("taco cat"))
-	fmt.Println(checkPalindromePermutation("taco cats"))
-}
-
 func checkPalindromePermutation(str string) bool  {
 	chars := strings.Split(str, "")
 	charMap := make(map[string]int)
