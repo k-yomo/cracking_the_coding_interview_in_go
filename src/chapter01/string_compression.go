@@ -5,25 +5,28 @@ import (
 	"strings"
 )
 
+func main() {
+	compressString("aaaabbcddda")
+}
+
 // 1.6
+// return original string if original string is shorter than compressed string
 func compressString(str string) string {
 	chars := strings.Split(str, "")
-	compressedStr := ""
-	curChar := chars[0]
-	count := 1
-	for i := 1; i < len(chars); i++ {
-		if chars[i] == curChar {
-			count++
-		} else {
-			compressedStr += curChar + strconv.Itoa(count)
-			curChar = chars[i]
-			count = 1
+	var compressedStr strings.Builder
+	consecutiveCount := 0
+
+	for i := 0; i < len(chars); i++ {
+		consecutiveCount++
+		if i+1 >= len(chars) || chars[i] != chars[i+1] {
+			compressedStr.WriteString(chars[i])
+			compressedStr.WriteString(strconv.Itoa(consecutiveCount))
+			consecutiveCount = 0
 		}
 	}
-	compressedStr += curChar + strconv.Itoa(count)
-	if len(compressedStr) >= len(str) {
+	if len(compressedStr.String()) >= len(str) {
 		return str
 	} else {
-		return compressedStr
+		return compressedStr.String()
 	}
 }
