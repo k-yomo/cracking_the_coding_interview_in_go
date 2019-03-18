@@ -1,10 +1,12 @@
-package main
+package __one_away
 
 import (
 	"strings"
 )
 
-// 1.5
+// 1.5 One Away
+// There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character.
+// Given two strings, write a function to check if they are one edit (or zero edits) away.
 func isOneAway(str1 string, str2 string) bool {
 	chars1, chars2 := strings.Split(str1, ""), strings.Split(str2, "")
 	if len(chars1) == len(chars2) {

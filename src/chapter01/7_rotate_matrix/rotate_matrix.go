@@ -1,4 +1,4 @@
-package main
+package __rotate_matrix
 
 // 1.7 Rotate Matrix
 // Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes,
@@ -6,10 +6,10 @@ package main
 func rotateMatrix(matrix [][]int) [][]int {
 	matrixLength := len(matrix)
 	rotatedMatrix := make([][]int, matrixLength)
-	for layer := 0; row < matrixLength; row++ {
-		rotatedMatrix[layer] = make([]int, matrixLength)
+	for row := 0; row < matrixLength; row++ {
+		rotatedMatrix[row] = make([]int, matrixLength)
 		for i := 0; i < matrixLength; i++ {
-			rotatedMatrix[layer][i] = matrix[matrixLength-i-1][row]
+			rotatedMatrix[row][i] = matrix[matrixLength-i-1][row]
 		}
 	}
 	return rotatedMatrix

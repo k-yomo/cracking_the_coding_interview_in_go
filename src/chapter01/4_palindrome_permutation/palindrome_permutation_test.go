@@ -1,21 +1,20 @@
-package main
+package __palindrome_permutation
 
 import (
 	"reflect"
 	"testing"
 )
 
-func TestCompressString(t *testing.T) {
+func TestcheckPalindromePermutation(t *testing.T) {
 	testCases := []struct {
-		str        string
-		expected   string
+		str      string
+		expected bool
 	}{
-		{"aaaabbcddda", "a4b2c1d3a1"},
-		{"abbbbccc", "a1b4c3"},
-		{"abbccc", "abbccc"},
+		{"taco cat", true},
+		{"taco cats", false},
 	}
 	for _, tc := range testCases {
-		result := compressString(tc.str)
+		result := checkPalindromePermutation(tc.str)
 		if !reflect.DeepEqual(tc.expected, result) {
 			t.Fatalf("failed test expected: %v, got: %v, params: %s", tc.expected, result, tc.str)
 		}

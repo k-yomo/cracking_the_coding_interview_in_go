@@ -1,4 +1,4 @@
-package main
+package __rotate_matrix
 
 import (
 	"reflect"

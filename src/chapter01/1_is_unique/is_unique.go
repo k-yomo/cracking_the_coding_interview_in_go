@@ -1,11 +1,13 @@
-package main
+package __is_unique
 
 import (
 	"sort"
 	"strings"
 )
 
-// 1.1
+// 1.1 Is Unique
+// Implement an algorithm to determine if a string has all unique characters.
+// What is you cannot use additional data structures?
 func isUnique(str string) bool {
 	chars := strings.Split(str, "")
 	sort.Strings(chars)

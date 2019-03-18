@@ -1,4 +1,4 @@
-package main
+package __is_unique
 
 import (
 	"reflect"

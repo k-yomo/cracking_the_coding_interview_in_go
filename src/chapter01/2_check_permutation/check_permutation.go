@@ -1,11 +1,12 @@
-package main
+package __check_permutation
 
 import (
 	"sort"
 	"strings"
 )
 
-// 1.2
+// 1.2 Check Permutation
+// Given two strings, write a method to decide if one is a permutation of the other.
 func checkPermutation(str1 string, str2 string) bool {
 	if len(str1) != len(str2) {
 		return false

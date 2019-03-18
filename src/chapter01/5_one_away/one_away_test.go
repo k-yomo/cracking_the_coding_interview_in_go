@@ -1,4 +1,4 @@
-package main
+package __one_away
 import (
 "reflect"
 "testing"

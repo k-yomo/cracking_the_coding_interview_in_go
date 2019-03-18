@@ -1,4 +1,4 @@
-package main
+package __check_permutation
 
 import (
 	"reflect"
