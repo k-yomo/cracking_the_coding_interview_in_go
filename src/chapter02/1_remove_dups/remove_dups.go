@@ -1,4 +1,4 @@
-package chapter02
+package __remove_dups
 
 import (
 	"container/list"
