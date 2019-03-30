@@ -11,7 +11,7 @@ func (s *SinglyLinkedList) Init() *SinglyLinkedList {
 	return s
 }
 
-func New() *SinglyLinkedList { return new(SinglyLinkedList).Init() }
+func NewSinglyLinkedList() *SinglyLinkedList { return new(SinglyLinkedList).Init() }
 
 func (s *SinglyLinkedList) Len() int {
 	return s.len
@@ -21,7 +21,7 @@ func (s *SinglyLinkedList) Front() *Node {
 	if s.len == 0 {
 		return nil
 	}
-	return s.root.next
+	return s.root
 }
 
 func (s *SinglyLinkedList) Back() *Node {
@@ -35,7 +35,7 @@ func (s *SinglyLinkedList) Back() *Node {
 	return n
 }
 
-func (s *SinglyLinkedList) Append(appendedNode *Node) {
+func (s *SinglyLinkedList) PushBack(appendedNode *Node) {
 	if s.root == nil {
 		s.root = appendedNode
 	} else {
