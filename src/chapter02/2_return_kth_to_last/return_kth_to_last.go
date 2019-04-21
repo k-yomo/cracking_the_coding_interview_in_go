@@ -15,7 +15,7 @@ func findKthToLast(list *helpers.SinglyLinkedList, kth int) []*helpers.Node {
 		if i >= kth {
 			nodes = append(nodes, curNode)
 		}
-		curNode = curNode.Next()
+		curNode = curNode.Next
 		i++
 	}
 	return nodes

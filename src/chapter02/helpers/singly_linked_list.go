@@ -29,8 +29,8 @@ func (s *SinglyLinkedList) Back() *Node {
 		return nil
 	}
 	n := s.root
-	for n.next != nil {
-		n = n.next
+	for n.Next != nil {
+		n = n.Next
 	}
 	return n
 }
@@ -41,11 +41,11 @@ func (s *SinglyLinkedList) PushBack(appendedNode *Node) {
 	} else {
 		n := s.root
 
-		for n.next != nil {
-			n = n.next
+		for n.Next != nil {
+			n = n.Next
 		}
 
-		n.next = appendedNode
+		n.Next = appendedNode
 	}
 	s.len++
 }
