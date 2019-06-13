@@ -51,4 +51,3 @@ func isOneInsert(shorterChars []string, longerChars []string) bool {
 	}
 	return true
 }
-

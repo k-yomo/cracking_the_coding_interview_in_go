@@ -2,7 +2,7 @@ package helpers
 
 type SinglyLinkedList struct {
 	root *Node
-	len int
+	len  int
 }
 
 func (s *SinglyLinkedList) Init() *SinglyLinkedList {
@@ -49,5 +49,3 @@ func (s *SinglyLinkedList) PushBack(appendedNode *Node) {
 	}
 	s.len++
 }
-
-

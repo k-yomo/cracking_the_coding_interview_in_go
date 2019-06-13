@@ -25,10 +25,10 @@ func betterRotateMatrix(matrix [][]int) [][]int {
 		for i := first; i < last; i++ {
 			offset := i - first
 			top := matrix[first][i]
-			matrix[first][i] = matrix[last-offset][first]     // left -> top
+			matrix[first][i] = matrix[last-offset][first]          // left -> top
 			matrix[last-offset][first] = matrix[last][last-offset] // bottom -> left
-			matrix[last][last-offset] = matrix[i][last]       // right -> bottom
-			matrix[i][last] = top                             // top -> right
+			matrix[last][last-offset] = matrix[i][last]            // right -> bottom
+			matrix[i][last] = top                                  // top -> right
 		}
 	}
 	return matrix

@@ -21,7 +21,7 @@ func isUnique(str string) bool {
 
 func isUniqueWithMap(str string) bool {
 	charMap := make(map[rune]bool)
-	for _, char := range []rune(str){
+	for _, char := range []rune(str) {
 		if charMap[char] {
 			return false
 		}

@@ -17,8 +17,8 @@ func TestDeleteMiddleNode(t *testing.T) {
 
 	testCases := []struct {
 		priorNode *helpers.Node
-		node     *helpers.Node
-		expected *helpers.Node
+		node      *helpers.Node
+		expected  *helpers.Node
 	}{
 		{
 			node1,

@@ -18,7 +18,7 @@ func TestFindKthToLast(t *testing.T) {
 
 	testCases := []struct {
 		list     *helpers.SinglyLinkedList
-		kth int
+		kth      int
 		expected []*helpers.Node
 	}{
 		{

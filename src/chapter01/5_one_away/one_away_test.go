@@ -1,12 +1,13 @@
 package __one_away
+
 import (
-"reflect"
-"testing"
+	"reflect"
+	"testing"
 )
 
 func TestIsOneAway(t *testing.T) {
 	testCases := []struct {
-		str1      string
+		str1     string
 		str2     string
 		expected bool
 	}{
@@ -24,4 +25,3 @@ func TestIsOneAway(t *testing.T) {
 		}
 	}
 }
-

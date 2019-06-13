@@ -7,8 +7,8 @@ import (
 
 func TestCompressString(t *testing.T) {
 	testCases := []struct {
-		str        string
-		expected   string
+		str      string
+		expected string
 	}{
 		{"aaaabbcddda", "a4b2c1d3a1"},
 		{"abbbbccc", "a1b4c3"},

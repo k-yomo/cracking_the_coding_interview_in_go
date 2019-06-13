@@ -7,9 +7,9 @@ import (
 
 func TestUrlify(t *testing.T) {
 	testCases := []struct {
-		str      string
+		str        string
 		charLength int
-		expected string
+		expected   string
 	}{
 		{"Kanji Yomoda  ", 13, "Kanji%20Yomoda%20"},
 		{"Kanji Yomoda  ", 5, "Kanji"},
