@@ -1,0 +1,36 @@
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+references:
+  default: &defaults
+    working_directory: ~/go/src/github/k-yomo/cracking_the_coding_interview_in_go
+    docker:
+      - image: circleci/golang:1.12
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: make test
+      - codecov/upload:
+          file: ./coverage.out
+
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Lint
+          command: "! go fmt ./... 2>&1 | read"
+
+workflows:
+  version: 2.1
+  build_and_test:
+    jobs:
+      - lint
+      - test
