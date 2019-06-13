@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestcheckPalindromePermutation(t *testing.T) {
+func TestCheckPalindromePermutation(t *testing.T) {
 	testCases := []struct {
 		str      string
 		expected bool

@@ -54,7 +54,7 @@ func TestRemoveDupsFromListWithBuffer(t *testing.T) {
 		},
 	}
 	for _, tc := range testCases {
-		removeDupsFromList(tc.list)
+		removeDupsFromListWithBuffer(tc.list)
 		if !reflect.DeepEqual(tc.expected, tc.list) {
 			t.Fatalf("failed test expected: %v, got: %v", tc.expected, tc.list)
 		}
