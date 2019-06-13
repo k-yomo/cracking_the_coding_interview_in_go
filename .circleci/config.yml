@@ -5,7 +5,9 @@ orbs:
 
 references:
   default: &defaults
-    working_directory: ~/go/src/github/k-yomo/cracking_the_coding_interview_in_go
+    environment:
+      - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/k-yomo/cracking_the_coding_interview_in_go
     docker:
       - image: circleci/golang:1.12
 
