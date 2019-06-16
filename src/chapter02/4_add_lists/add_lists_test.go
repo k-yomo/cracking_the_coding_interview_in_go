@@ -1,16 +1,16 @@
 package __add_lists
 
 import (
-	"github.com/k-yomo/cracking_the_coding_interview_in_go/src/chapter02/helpers"
+	"github.com/k-yomo/cracking_the_coding_interview_in_go/src/chapter02/helpers/singly_linked_list"
 	"reflect"
 	"testing"
 )
 
 func TestAddLists(t *testing.T) {
 	testCases := []struct {
-		Node1    *helpers.Node
-		Node2    *helpers.Node
-		Expected *helpers.SinglyLinkedList
+		Node1    *singly_linked_list.Node
+		Node2    *singly_linked_list.Node
+		Expected *singly_linked_list.SinglyLinkedList
 	}{
 		{
 			nil,
@@ -18,9 +18,9 @@ func TestAddLists(t *testing.T) {
 			nil,
 		},
 		{
-			helpers.NewSinglyLinkedListFromIntArray([]int{1, 9, 4}).Front(),
-			helpers.NewSinglyLinkedListFromIntArray([]int{3, 1, 9}).Front(),
-			helpers.NewSinglyLinkedListFromIntArray([]int{4, 0, 3}),
+			singly_linked_list.NewFromArray([]interface{}{1, 9, 4}).Front(),
+			singly_linked_list.NewFromArray([]interface{}{3, 1, 9}).Front(),
+			singly_linked_list.NewFromArray([]interface{}{4, 0, 3}),
 		},
 	}
 

@@ -1,4 +1,4 @@
-package helpers
+package singly_linked_list
 
 import (
 	"fmt"
@@ -16,12 +16,12 @@ func (s *SinglyLinkedList) Init() *SinglyLinkedList {
 	return s
 }
 
-func NewSinglyLinkedList() *SinglyLinkedList { return new(SinglyLinkedList).Init() }
+func New() *SinglyLinkedList { return new(SinglyLinkedList).Init() }
 
-func NewSinglyLinkedListFromIntArray(array []int) *SinglyLinkedList {
-	list := NewSinglyLinkedList()
-	for _, num := range array {
-		list.PushBack(&Node{Value: num})
+func NewFromArray(array []interface{}) *SinglyLinkedList {
+	list := New()
+	for _, value := range array {
+		list.PushBack(&Node{Value: value})
 	}
 	return list
 }
@@ -31,9 +31,6 @@ func (s *SinglyLinkedList) Len() int {
 }
 
 func (s *SinglyLinkedList) Front() *Node {
-	if s.len == 0 {
-		return nil
-	}
 	return s.root
 }
 
@@ -83,5 +80,5 @@ func (s *SinglyLinkedList) String() string {
 	for i, item := range array {
 		strArray[i] = fmt.Sprintf("%v", item)
 	}
-	return "SinglyLinkedList{" + strings.Join(strArray, "->") + "}"
+	return fmt.Sprintf("SinglyLinkedList{%s}", strings.Join(strArray, "->"))
 }

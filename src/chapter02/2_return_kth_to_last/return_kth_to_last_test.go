@@ -1,25 +1,25 @@
 package __return_kth_to_last
 
 import (
-	"github.com/k-yomo/cracking_the_coding_interview_in_go/src/chapter02/helpers"
+	"github.com/k-yomo/cracking_the_coding_interview_in_go/src/chapter02/helpers/singly_linked_list"
 	"reflect"
 	"testing"
 )
 
 func TestFindKthToLast(t *testing.T) {
-	singlyLinkedList := helpers.NewSinglyLinkedList()
-	node1 := &helpers.Node{Value: "a"}
-	node2 := &helpers.Node{Value: "b"}
-	node3 := &helpers.Node{Value: "c"}
+	singlyLinkedList := singly_linked_list.New()
+	node1 := &singly_linked_list.Node{Value: "a"}
+	node2 := &singly_linked_list.Node{Value: "b"}
+	node3 := &singly_linked_list.Node{Value: "c"}
 	singlyLinkedList.PushBack(node1)
 	singlyLinkedList.PushBack(node2)
 	singlyLinkedList.PushBack(node3)
-	expectedNodes := []*helpers.Node{node2, node3}
+	expectedNodes := []*singly_linked_list.Node{node2, node3}
 
 	testCases := []struct {
-		list     *helpers.SinglyLinkedList
+		list     *singly_linked_list.SinglyLinkedList
 		kth      int
-		expected []*helpers.Node
+		expected []*singly_linked_list.Node
 	}{
 		{
 			singlyLinkedList,

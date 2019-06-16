@@ -1,24 +1,24 @@
 package __delete_middle_node
 
 import (
-	"github.com/k-yomo/cracking_the_coding_interview_in_go/src/chapter02/helpers"
+	"github.com/k-yomo/cracking_the_coding_interview_in_go/src/chapter02/helpers/singly_linked_list"
 	"reflect"
 	"testing"
 )
 
 func TestDeleteMiddleNode(t *testing.T) {
-	singlyLinkedList := helpers.NewSinglyLinkedList()
-	node1 := &helpers.Node{Value: "a"}
-	node2 := &helpers.Node{Value: "b"}
-	node3 := &helpers.Node{Value: "c"}
+	singlyLinkedList := singly_linked_list.New()
+	node1 := &singly_linked_list.Node{Value: "a"}
+	node2 := &singly_linked_list.Node{Value: "b"}
+	node3 := &singly_linked_list.Node{Value: "c"}
 	singlyLinkedList.PushBack(node1)
 	singlyLinkedList.PushBack(node2)
 	singlyLinkedList.PushBack(node3)
 
 	testCases := []struct {
-		priorNode *helpers.Node
-		node      *helpers.Node
-		expected  *helpers.Node
+		priorNode *singly_linked_list.Node
+		node      *singly_linked_list.Node
+		expected  *singly_linked_list.Node
 	}{
 		{
 			node1,
