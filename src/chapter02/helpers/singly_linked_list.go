@@ -51,6 +51,7 @@ func (s *SinglyLinkedList) Back() *Node {
 func (s *SinglyLinkedList) PushBack(appendedNode *Node) {
 	if s.root == nil {
 		s.root = appendedNode
+		s.len = 1
 	} else {
 		n := s.root
 
@@ -59,15 +60,15 @@ func (s *SinglyLinkedList) PushBack(appendedNode *Node) {
 		}
 
 		n.Next = appendedNode
+		s.len++
 	}
-	s.len++
 }
 
 func (s *SinglyLinkedList) ToArray() []interface{} {
 	if s.len == 0 {
 		return []interface{}{}
 	}
-	var array []interface{}
+	array := make([]interface{}, 0, s.len)
 	n := s.root
 	for n != nil {
 		array = append(array, n.Value)
@@ -78,9 +79,9 @@ func (s *SinglyLinkedList) ToArray() []interface{} {
 
 func (s *SinglyLinkedList) String() string {
 	array := s.ToArray()
-	var strArray []string
-	for _, item := range array {
-		strArray = append(strArray, fmt.Sprintf("%v", item))
+	strArray := make([]string, len(array))
+	for i, item := range array {
+		strArray[i] = fmt.Sprintf("%v", item)
 	}
 	return "SinglyLinkedList{" + strings.Join(strArray, "->") + "}"
 }

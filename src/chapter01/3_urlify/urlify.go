@@ -9,16 +9,16 @@ import (
 // You may assume that the string has sufficient space at the end to hold the additional characters,
 // and that you are given the "true" length of the string.
 func urlify(str string, charLength int) string {
-	var chars []string
+	chars := make([]string, charLength)
 	for i, charRune := range str {
 		if i >= charLength {
 			break
 		}
 		char := string(charRune)
 		if char == " " {
-			chars = append(chars, "%20")
+			chars[i] = "%20"
 		} else {
-			chars = append(chars, char)
+			chars[i] = char
 		}
 	}
 	return strings.Join(chars, "")

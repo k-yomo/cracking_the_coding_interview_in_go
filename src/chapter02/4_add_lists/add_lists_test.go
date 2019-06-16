@@ -27,7 +27,7 @@ func TestAddLists(t *testing.T) {
 	for _, tc := range testCases {
 		result := addLists(tc.Node1, tc.Node2)
 		if !reflect.DeepEqual(tc.Expected, result) {
-			t.Fatalf("failed test expected: %#v, got: %v", tc.Expected, result)
+			t.Fatalf("failed test expected: %v, got: %v", tc.Expected, result)
 		}
 	}
 }
